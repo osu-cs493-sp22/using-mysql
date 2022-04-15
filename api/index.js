@@ -1,4 +1,6 @@
-const router = require('express').Router()
+const { Router } = require('express')
+
+const router = Router()
 
 router.use('/lodgings', require('./lodgings'))
 

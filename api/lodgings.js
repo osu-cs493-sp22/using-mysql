@@ -1,24 +1,26 @@
-const router = require('express').Router()
+const { Router } = require('express')
 
-router.get('/lodgings', function (req, res, next) {
+const router = Router()
+
+router.get('/', function (req, res, next) {
     res.status(200).send({})
 })
 
-router.post('/lodgings', function (req, res, next) {
+router.post('/', function (req, res, next) {
     res.status(201).send({})
 })
 
-router.get('/lodgings/:id', function (req, res, next) {
+router.get('/:id', function (req, res, next) {
     const id = req.params.id
     res.status(200).send({})
 })
 
-router.patch('/lodgings/:id', function (req, res, next) {
+router.patch('/:id', function (req, res, next) {
     const id = req.params.id
     res.status(200).send({})
 })
 
-router.delete('/lodgings/:id', function (req, res, next) {
+router.delete('/:id', function (req, res, next) {
     const id = req.params.id
     res.status(204).send()
 })

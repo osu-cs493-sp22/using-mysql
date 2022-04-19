@@ -23,7 +23,7 @@ app.use('/', api)
  * a response with a 500 status to the client.
  */
 app.use('*', function (err, req, res, next) {
-    console.err("== Error:", err)
+    console.error("== Error:", err)
     res.status(500).send({
         err: "Server error.  Please try again later."
     })

@@ -5,7 +5,9 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.17.3",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.19.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

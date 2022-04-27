@@ -18,6 +18,12 @@ app.use(express.json())
  */
 app.use('/', api)
 
+app.use('*', function (req, res, next) {
+    res.status(404).send({
+        err: "This URL was not recognized: " + req.originalUrl
+    })
+})
+
 /*
  * This route will catch any errors thrown from our API endpoints and return
  * a response with a 500 status to the client.
@@ -26,12 +32,6 @@ app.use('*', function (err, req, res, next) {
     console.error("== Error:", err)
     res.status(500).send({
         err: "Server error.  Please try again later."
-    })
-})
-
-app.use('*', function (req, res, next) {
-    res.status(404).send({
-        err: "This URL was not recognized: " + req.originalUrl
     })
 })
 
